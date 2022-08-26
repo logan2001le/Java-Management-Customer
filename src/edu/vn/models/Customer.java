@@ -16,16 +16,15 @@ public class Customer implements Serializable {
     private String address;
     private String phone;
     private String email;
-
+    
+    public Customer() {}
+    
     public Customer(String id, String name, String address, String phone, String email) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.phone = phone;
         this.email = email;
-    }
-
-    public Customer() {
     }
 
     public String getId() {
@@ -68,6 +67,6 @@ public class Customer implements Serializable {
         this.email = email;
     }
     
+}  
     
-    
-}
+

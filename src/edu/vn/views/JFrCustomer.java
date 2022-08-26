@@ -7,6 +7,7 @@ package edu.vn.views;
 import edu.vn.models.Customer;
 import edu.vn.models.CustomerDAO;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -114,6 +115,11 @@ public class JFrCustomer extends javax.swing.JFrame {
                 "CustomerID", "Full Name", "Address", "Phone", "Email"
             }
         ));
+        tbCustomer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbCustomerMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tbCustomer);
 
         btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/vn/views/add-group (1).png"))); // NOI18N
@@ -131,6 +137,11 @@ public class JFrCustomer extends javax.swing.JFrame {
         });
 
         btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/vn/views/delete.png"))); // NOI18N
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         btnFind.setText("Find");
 
@@ -324,13 +335,15 @@ public class JFrCustomer extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnNextActionPerformed
     
-    
-    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+    private void clearForm(){
         txtID.setText("");
         txtName.setText("");
         txtAddress.setText("");
         txtPhone.setText("");
         txtEmail.setText("");
+    }
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        clearForm();
     }//GEN-LAST:event_btnAddActionPerformed
 
     public Customer getModel(){
@@ -343,6 +356,7 @@ public class JFrCustomer extends javax.swing.JFrame {
         return cc;
     }
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        
         Customer cc= getModel();
         if (dao.save(cc)>=0) {
             lbMessage.setText("Saved successfully");
@@ -352,9 +366,36 @@ public class JFrCustomer extends javax.swing.JFrame {
             lbMessage.setText("Saved unsuccessfully");   
             lbMessage.setForeground(Color.red);
         }
+        //clearForm();
         fillTable();
         
     }//GEN-LAST:event_btnSaveActionPerformed
+    private void setModel(Customer cc) {
+        txtID.setText(cc.getId());
+        txtName.setText(cc.getName());
+        txtAddress.setText(cc.getAddress());
+        txtPhone.setText(cc.getPhone());
+        txtEmail.setText(cc.getEmail());
+    }
+
+    private void tbCustomerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbCustomerMouseClicked
+            int pos = tbCustomer.getSelectedRow();
+            setModel(dao.getCustomerByPositon(pos));
+                             
+    }//GEN-LAST:event_tbCustomerMouseClicked
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+           String strID = JOptionPane.showInputDialog(this,"Input id to delete:"); 
+           if (dao.del(strID)>=0) {
+            lbMessage.setText("Deleted successfully");
+            lbMessage.setForeground(Color.blue);
+
+        }else{
+            lbMessage.setText("Deleted unsuccessfully");   
+            lbMessage.setForeground(Color.red);
+        }
+           fillTable();
+    }//GEN-LAST:event_btnDeleteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -417,4 +458,5 @@ public class JFrCustomer extends javax.swing.JFrame {
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtPhone;
     // End of variables declaration//GEN-END:variables
+
 }

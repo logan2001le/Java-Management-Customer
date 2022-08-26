@@ -4,7 +4,7 @@
  */
 package edu.vn.inf;
 
-import edu.vn.models.Customer;
+import edu.vn.models .Customer;
 import java.util.List;
 
 /**

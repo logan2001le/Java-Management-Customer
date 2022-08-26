@@ -40,7 +40,6 @@ public class CustomerDAO implements InterfCustomer{
         int position=-1;
         for (int i = 0; i < ls.size(); i++) {
             if (ls.get(i).getId().equals(id)) {
-            } else {
                 position=i;
                 break;
             }
@@ -60,6 +59,7 @@ public class CustomerDAO implements InterfCustomer{
     @Override
     public List<Customer> openFile() {
         
+        ls.clear();
         ls.add(new Customer("1234","Long","asd","ddf","dff"));
         ls.add(new Customer("12454","Lng","asdg","ddsf","df13f"));
         ls.add(new Customer("0123","Lrdng","fsd","ddddf","daff"));
@@ -68,7 +68,6 @@ public class CustomerDAO implements InterfCustomer{
 
     @Override
     public void saveFile(List<Customer> ls) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
