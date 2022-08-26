@@ -6,6 +6,7 @@ package edu.vn.views;
 
 import edu.vn.models.Customer;
 import edu.vn.models.CustomerDAO;
+import java.awt.Color;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -67,6 +68,7 @@ public class JFrCustomer extends javax.swing.JFrame {
         btnLast = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         btnNext = new javax.swing.JButton();
+        lbMessage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -109,7 +111,7 @@ public class JFrCustomer extends javax.swing.JFrame {
 
             },
             new String [] {
-                "CustomerID", "Full Name", "Email", "Phone", "Address"
+                "CustomerID", "Full Name", "Address", "Phone", "Email"
             }
         ));
         jScrollPane1.setViewportView(tbCustomer);
@@ -122,6 +124,11 @@ public class JFrCustomer extends javax.swing.JFrame {
         });
 
         btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/vn/views/download.png"))); // NOI18N
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
 
         btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/vn/views/delete.png"))); // NOI18N
 
@@ -174,25 +181,17 @@ public class JFrCustomer extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addComponent(btnFirst, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(btnOpen, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(42, 42, 42)
-                                .addComponent(btnExit))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnNext, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnLast, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(54, 54, 54))))
+                        .addGap(22, 22, 22)
+                        .addComponent(btnFirst, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnNext, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnLast, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(54, 54, 54))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
@@ -228,8 +227,16 @@ public class JFrCustomer extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(btnFind)
                                         .addGap(12, 12, 12)))))
-                        .addGap(14, 14, 14)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 466, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnOpen)
+                        .addGap(60, 60, 60)
+                        .addComponent(lbMessage)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnExit)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -270,7 +277,8 @@ public class JFrCustomer extends javax.swing.JFrame {
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnOpen)
-                            .addComponent(btnExit))
+                            .addComponent(btnExit)
+                            .addComponent(lbMessage))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnFirst)
@@ -325,6 +333,29 @@ public class JFrCustomer extends javax.swing.JFrame {
         txtEmail.setText("");
     }//GEN-LAST:event_btnAddActionPerformed
 
+    public Customer getModel(){
+        Customer cc = new Customer();
+        cc.setId(txtID.getText());
+        cc.setName(txtName.getText());
+        cc.setAddress(txtAddress.getText());
+        cc.setPhone(txtPhone.getText());
+        cc.setEmail(txtEmail.getText());
+        return cc;
+    }
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        Customer cc= getModel();
+        if (dao.save(cc)>=0) {
+            lbMessage.setText("Saved successfully");
+            lbMessage.setForeground(Color.blue);
+
+        }else{
+            lbMessage.setText("Saved unsuccessfully");   
+            lbMessage.setForeground(Color.red);
+        }
+        fillTable();
+        
+    }//GEN-LAST:event_btnSaveActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -376,6 +407,7 @@ public class JFrCustomer extends javax.swing.JFrame {
     private javax.swing.JLabel lbAdd;
     private javax.swing.JLabel lbEmail;
     private javax.swing.JLabel lbID;
+    private javax.swing.JLabel lbMessage;
     private javax.swing.JLabel lbName;
     private javax.swing.JLabel lbPhone;
     private javax.swing.JTable tbCustomer;

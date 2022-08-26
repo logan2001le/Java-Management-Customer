@@ -25,6 +25,9 @@ public class Customer implements Serializable {
         this.email = email;
     }
 
+    public Customer() {
+    }
+
     public String getId() {
         return id;
     }
