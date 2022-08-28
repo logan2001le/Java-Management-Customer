@@ -411,10 +411,6 @@ public class JFrCustomer extends javax.swing.JFrame {
             JOptionPane.showInputDialog(this,"Invalid ID - No found the customer you want to find");
         }
            fillTable();
-
-
-
-        
     }//GEN-LAST:event_btnFindActionPerformed
 
     /**
