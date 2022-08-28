@@ -6,7 +6,10 @@ package edu.vn.views;
 
 import edu.vn.models.Customer;
 import edu.vn.models.CustomerDAO;
+import edu.vn.utils.FileUtil;
 import java.awt.Color;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -22,6 +25,22 @@ public class JFrCustomer extends javax.swing.JFrame {
     public JFrCustomer() {
         initComponents();
         setLocationRelativeTo(null);
+        addWindowListener(new WindowAdapter(){
+        @Override
+       public void windowClosing (WindowEvent e){
+        super.windowClosing(e);
+        System.out.println("WindowClosing");
+       try{
+           dao.saveFile();
+        JOptionPane.showMessageDialog(e.getWindow(),"Record data successfully");
+       }catch (Exception ex){
+           System.out.println(e.toString());
+              }
+        }
+       
+       
+        });
+        
     }
 
     public void fillTable(){
@@ -321,7 +340,15 @@ public class JFrCustomer extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOpenActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-        System.exit(0);
+       try 
+       {
+        dao.saveFile();
+        JOptionPane.showMessageDialog(this,"Record data successfully");
+       }
+       catch(Exception e)
+       {System.out.println(e.toString());}
+        
+       System.exit(0);
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnFirstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFirstActionPerformed
@@ -474,5 +501,7 @@ public class JFrCustomer extends javax.swing.JFrame {
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtPhone;
     // End of variables declaration//GEN-END:variables
+
+    
 
 }
