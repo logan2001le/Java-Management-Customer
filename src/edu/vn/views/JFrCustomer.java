@@ -144,6 +144,11 @@ public class JFrCustomer extends javax.swing.JFrame {
         });
 
         btnFind.setText("Find");
+        btnFind.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFindActionPerformed(evt);
+            }
+        });
 
         btnOpen.setText("Open");
         btnOpen.addActionListener(new java.awt.event.ActionListener() {
@@ -396,6 +401,21 @@ public class JFrCustomer extends javax.swing.JFrame {
         }
            fillTable();
     }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnFindActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFindActionPerformed
+            String strID = JOptionPane.showInputDialog(this,"Input id to find :"); 
+            int pos=dao.findById(strID);
+            if (pos>=0) {
+            setModel(dao.getCustomerByPositon(pos));
+        }else{
+            JOptionPane.showInputDialog(this,"Invalid ID - No found the customer you want to find");
+        }
+           fillTable();
+
+
+
+        
+    }//GEN-LAST:event_btnFindActionPerformed
 
     /**
      * @param args the command line arguments
