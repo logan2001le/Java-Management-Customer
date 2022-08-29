@@ -5,8 +5,12 @@
 package edu.vn.models;
 
 import edu.vn.inf.InterfCustomer;
+import edu.vn.utils.FileUtil;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -57,25 +61,29 @@ public class CustomerDAO implements InterfCustomer{
     }
 
     @Override
-    public List<Customer> openFile() {
-        
+    public List<Customer> openFile() {     
+       try {
         ls.clear();
-        ls.add(new Customer("1234","Long","asd","ddf","dff"));
-        ls.add(new Customer("12454","Lng","asdg","ddsf","df13f"));
-        ls.add(new Customer("0123","Lrdng","fsd","ddddf","daff"));
+        ls=FileUtil.rFile();
+       }catch (Exception e){
+           System.out.println("Error"+e.toString());
+       }
         return ls;
     }
 
     @Override
-    public void saveFile(List<Customer> ls) {
+    public void saveFile() {
+        try {
+            FileUtil.wFile(ls);
+        } catch (Exception e) {
+            System.out.println("Error:"+ e.toString());
+        }
     }
 
     @Override
     public List<Customer> getAlls() {
         return ls;
     }
-        
-    
     @Override
     public int count(){
         return ls.size();
