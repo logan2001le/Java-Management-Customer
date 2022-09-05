@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="76cc07af-91f2-4c4e-a014-c881c6569911" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Java-Management-Customer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ant.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Managing.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/vn/models/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/vn/models/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/vn/utils/Validation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/vn/utils/Validation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer.form" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/vn/views/JFrCustomer.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer.dat" beforeDir="false" afterPath="$PROJECT_DIR$/customer.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.mf" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.mf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/genfiles.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Managing/edu/vn/utils/Validation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Managing/edu/vn/utils/Validation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Managing/edu/vn/views/JFrCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/vn/inf/InterfCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/vn/inf/InterfCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/vn/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/vn/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/vn/models/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/vn/models/CustomerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/vn/utils/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/vn/utils/FileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/vn/utils/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/vn/utils/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/vn/views/JFrCustomer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/vn/views/JFrCustomer.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/vn/views/JFrCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/vn/views/JFrCustomer.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2EKvqkMS6PWKmI9QyFsZISUGMba" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/macbook/Downloads/Java-Management-Customer"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76cc07af-91f2-4c4e-a014-c881c6569911" name="Changes" comment="" />
+      <created>1662357284949</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662357284949</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
